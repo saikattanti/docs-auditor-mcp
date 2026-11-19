@@ -1,0 +1,49 @@
+{
+  "name": "docs-auditor-mcp",
+  "version": "1.1.0",
+  "description": "MCP server and CLI that audits README/docs drift against a real codebase.",
+  "type": "module",
+  "bin": {
+    "docs-auditor": "./dist/cli.js",
+    "docs-auditor-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "mcp": "tsx src/index.ts",
+    "audit": "tsx src/cli.ts",
+    "audit:fixture": "tsx src/cli.ts --path fixtures/drifted-sdk",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "devrel",
+    "documentation",
+    "docs-drift",
+    "github"
+  ],
+  "author": "Saikat Tanti <saikattanti2005@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikattanti/docs-auditor-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saikattanti/docs-auditor-mcp/issues"
+  },
+  "homepage": "https://github.com/saikattanti/docs-auditor-mcp#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
