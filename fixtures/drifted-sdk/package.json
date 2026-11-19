@@ -1,0 +1,14 @@
+{
+  "name": "@acme/drifted-sdk",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/cli.js",
+    "build": "echo build",
+    "test": "node --test"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
