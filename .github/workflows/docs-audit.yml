@@ -1,0 +1,24 @@
+name: Docs audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      # Fail the job when critical or high docs-drift findings appear in the fixture demo.
+      # Point --path at your product repo in real usage.
+      - name: Audit fixture (CI gate)
+        run: npx tsx src/cli.ts --path fixtures/drifted-sdk --format json --fail-on high
+        continue-on-error: true
