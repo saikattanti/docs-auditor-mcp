@@ -1,0 +1,161 @@
+{
+  "target": "expressjs/express",
+  "source": "github",
+  "generatedAt": "2026-11-19T10:02:54.764Z",
+  "score": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 10,
+    "total": 11
+  },
+  "snippetsChecked": 11,
+  "docs": [
+    "Readme.md",
+    "examples/README.md"
+  ],
+  "findings": [
+    {
+      "id": "cmd-1",
+      "severity": "critical",
+      "category": "broken_command",
+      "title": "npm script \"start\" does not exist",
+      "detail": "Docs tell developers to run `start`, but package.json scripts are: lint, lint:fix, test, test-ci, test-cov, test-tap.",
+      "docPath": "Readme.md",
+      "docLine": 113,
+      "suggestion": "Add a \"start\" script to package.json, or document the real command."
+    },
+    {
+      "id": "issue-7527",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7527: Readme: project name 'express.js' is not capitalized",
+      "detail": "Labels: none. URL: https://github.com/expressjs/express/issues/7527",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-7231",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7231: Docs: Add instructions for TypeScript",
+      "detail": "Labels: docs, module:express-generator, typescript. URL: https://github.com/expressjs/express/issues/7231",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-7588",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7588: Outdated res.send() syntax in lib/response.js documentation example",
+      "detail": "Labels: docs. URL: https://github.com/expressjs/express/issues/7588",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-7592",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7592: Use cross-platform directory name in QS guide",
+      "detail": "Labels: docs. URL: https://github.com/expressjs/express/issues/7592",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-4523",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #4523: Router events (enabling route documentation) – feature request",
+      "detail": "Labels: future. URL: https://github.com/expressjs/express/issues/4523",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-7140",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7140: View.prototype.lookup() lacks path containment check (unlike send library for res.sendFile)",
+      "detail": "Labels: enhancement, security, require-triage. URL: https://github.com/expressjs/express/issues/7140",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-4298",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #4298: req.params undefined with unspecified res.format default",
+      "detail": "Labels: awaiting more info. URL: https://github.com/expressjs/express/issues/4298",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-6711",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #6711: Restore Support for app.all('*') Wildcard in Express v5",
+      "detail": "Labels: none. URL: https://github.com/expressjs/express/issues/6711",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-6541",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #6541: \"trust proxy\" callback called multiple times on single request",
+      "detail": "Labels: require-triage. URL: https://github.com/expressjs/express/issues/6541",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    },
+    {
+      "id": "issue-7525",
+      "severity": "low",
+      "category": "docs_gap",
+      "title": "Open docs issue #7525: JSDoc for the req.query getter documents the wrong return type",
+      "detail": "Labels: none. URL: https://github.com/expressjs/express/issues/7525",
+      "suggestion": "Triage whether this issue maps to a missing quickstart step, broken snippet, or API gap — then ship a docs PR."
+    }
+  ],
+  "patches": [],
+  "trace": [
+    {
+      "step": "1. Fetch repo structure",
+      "tool": "fetch_repo_structure",
+      "startedAt": "2026-11-19T10:02:51.318Z",
+      "durationMs": 1795,
+      "summary": "216 files (github)"
+    },
+    {
+      "step": "2. Read documentation",
+      "tool": "read_docs",
+      "startedAt": "2026-11-19T10:02:53.113Z",
+      "durationMs": 688,
+      "summary": "2 doc file(s)"
+    },
+    {
+      "step": "3. Cross-check snippets vs code",
+      "tool": "cross_check_snippets",
+      "startedAt": "2026-11-19T10:02:53.801Z",
+      "durationMs": 348,
+      "summary": "11 snippet(s), 1 finding(s)"
+    },
+    {
+      "step": "4. Check prose path references",
+      "tool": "cross_check_snippets",
+      "startedAt": "2026-11-19T10:02:54.149Z",
+      "durationMs": 0,
+      "summary": "0 prose finding(s)"
+    },
+    {
+      "step": "5. Check environment variable drift",
+      "tool": "check_env_drift",
+      "startedAt": "2026-11-19T10:02:54.149Z",
+      "durationMs": 1,
+      "summary": "0 env finding(s)"
+    },
+    {
+      "step": "6. Analyze open docs-related issues",
+      "tool": "analyze_open_issues",
+      "startedAt": "2026-11-19T10:02:54.150Z",
+      "durationMs": 613,
+      "summary": "10 open docs-related issue(s)"
+    },
+    {
+      "step": "7. Generate fix patches",
+      "tool": "generate_fix_patch",
+      "startedAt": "2026-11-19T10:02:54.763Z",
+      "durationMs": 1,
+      "summary": "0 proposed patch(es)"
+    }
+  ]
+}

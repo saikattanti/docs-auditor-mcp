@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "docs-auditor": {
+      "command": "npx",
+      "args": ["tsx", "/absolute/path/to/docs-auditor-mcp/src/index.ts"],
+      "env": {
+        "GITHUB_TOKEN": ""
+      }
+    }
+  }
+}
